@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<body class="light">
+    <!-- header -->
+    <div class="header">
+        <h2>Ziyad Badr</h2>
+        <p>Computer Engineer</p>
+    </div>
+
+    <!-- navbar -->
+    <nav>
+    <a class="logo" href="#">Ziyad</a>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#sectionOne">About</a></li>
+        <li><a href="#sectionTwo">Skills</a></li>
+        <li><a href="#sectionThree">Contact</a></li>
+    </ul>
+    <button id="themeToggle" onclick="toggleTheme()">
+    <span id="themeIcon">🌙</span></button>
+</nav>
+    <!-- end navbar -->
+
+    <!-- About me -->
+    <div id="sectionOne" > 
+        <h2>About Me</h2>
+        <div class="underline"></div>
+        <p>I’m Computer Engineering student with a strong interest in both hardware and software systems.
+        I enjoy exploring how things work—from circuit boards to code—and solving real-world problems using technology.
+        My focus is on building efficient, intelligent systems that can make a difference.
+        Currently, I’m developing my skills in programming,
+        embedded systems, and digital design, and I’m excited to continue growing through hands-on projects and collaboration.
+        </div>
+
+
+    <!-- Skills -->
+    <div id="sectionTwo"> 
+        <h2>Skills</h2>
+        <div class="underline"></div>
+        <div class="skills">
+        <div class="soft-skills">
+            <h3>Soft Skills</h3>
+            <ul>
+                <li> problem solving,</li>
+                <li> Attention to Detail </li>
+                <li> Time Management & Organization </li>
+                <li> Teamwork & Communication</li>
+                <li> Adaptability & Continuous Learning </li>
+            </ul>
+        </div>
+        <div class="Technical-skills">
+            <h3>Technical Skills</h3>
+            <div class="section-technical-skills">
+            <div class="sub-technical-skills"> 
+                <h4>software</h4>
+                <ul>
+                <li> C/C++ </li>
+                <li> Data Structures & Algorithms</li>
+                <li> Object-Oriented Programming (OOP) </li>
+                <li> Basic Web Development (HTML, CSS, JS)</li>
+                <li> Version Control – Using Git & GitHub</li>
+            </ul>
+            </div>
+            
+            <div class="sub-technical-skills">
+                <h4>hardware </h4>
+                <ul>
+                <li> Digital Logic Design</li>
+                <li> Microcontrollers & Embedded Systems</li>
+                <li> Circuit Design </li>
+                <li> Computer Architecture </li>
+            </ul>
+            </div>
+            <div class="sub-technical-skills"> 
+                <h4>Systems & Tools</h4>
+                <ul>
+                <li> Linux & Command Line </li>
+                <li> Networking Basics– Understand TCP/IP, routing, protocols</li>
+            </ul>
+            </div>
+           </div> 
+        </div>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div id="sectionThree"> 
+        <h2>Contact</h2>
+        <div class="underline"></div>
+        <div class="contact">
+        <p>Email:  kt14638@yahoo.com</p>
+        <p>github: https://github.com/zayed8993</p>
+    </div>
+    </div>
+
+    
+<br><br>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="date"></span> Zeyad Badr</p>
+    </footer>
+
+    <script>
+        let date = document.getElementById('date');
+        date.innerHTML = new Date().getFullYear();
+        // ..............
+        function toggleTheme() {
+        const body = document.body;
+        const icon = document.getElementById('themeIcon');
+
+        body.classList.toggle('dark');
+        body.classList.toggle('light');
+
+        // Change icon depending on theme
+        if (body.classList.contains('dark')) {
+            icon.textContent = '☀️'; // Sun for light mode
+        } else {
+            icon.textContent = '🌙'; // Moon for dark mode
+        }
+        }
+    </script>
+
+</body>
+</html>
